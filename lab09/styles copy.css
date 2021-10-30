@@ -1,3 +1,4 @@
 h1 {text-align: center;}
 .firstrow {display: flex;
-justify-content: space-around;}
+justify-content: space-evenly;}
+.otherskills {background-color: rebeccapurple; color: white;}
