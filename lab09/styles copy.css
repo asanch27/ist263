@@ -1,7 +1,14 @@
-h1 {text-align: center;}
+nav{background-color: #123c69;}
+nav a{color: white}
+a:hover{background-color: purple;}
+nav{padding: 10px;}
+nav{margin-bottom: 30px;}
 
-.firstrow {display: flex; justify-content: space-evenly;flex: 75%;}
+h1 {text-align: center; margin:1 rem;}
+p1 {margin: 1rem;}
 
-.otherskills {background-color: rebeccapurple; color: white; border-radius: 15px; flex: 25%; padding-left: 1rem;}
+.firstrow {display: flex; justify-content: space-evenly;flex: 75%; margin: 2rem;}
+
+.otherskills {background-color: rebeccapurple; color: white; border-radius: 15px; flex: 25%; padding: 1rem; margin: 2rem;}
 
 .flexbox2 {display:flex;}
