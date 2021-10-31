@@ -5,7 +5,7 @@ nav{padding: 10px;}
 nav{margin-bottom: 30px;}
 
 h1 {text-align: center; margin:1 rem;}
-p1 {margin: 1rem;}
+p {margin: 1rem;}
 
 .firstrow {display: flex; justify-content: space-evenly;flex: 75%; margin: 2rem;}
 
