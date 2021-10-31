@@ -4,8 +4,8 @@ a:hover{background-color: purple;}
 nav{padding: 10px;}
 nav{margin-bottom: 30px;}
 
-h1 {text-align: center; margin:1 rem;}
-p {margin: 1rem;}
+h1 {text-align: center; margin: 2rem;}
+p {margin: 2rem;}
 
 .firstrow {display: flex; justify-content: space-evenly;flex: 75%; margin: 2rem;}
 
