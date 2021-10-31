@@ -1,4 +1,5 @@
 h1 {text-align: center;}
-.firstrow {display: flex;
-justify-content: space-evenly;}
-.otherskills {background-color: rebeccapurple; color: white;}
+.firstrow {display: flex; justify-content: space-evenly;flex: 75%;}
+.otherskills {background-color: rebeccapurple; color: white;
+border-radius: 15px; flex: 25%;}
+.flexbox2 {display:flex;}
