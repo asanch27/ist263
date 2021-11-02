@@ -12,8 +12,9 @@
             .row1 div {
                 padding: 40px;
             }
-            .banner {width: 100%}
-            .bannersmall {width:100%}
+            .banner {width: 100%} /* use for a large image to scale to width */
+            .bannersmall {max-width:100%} /* use it for a smaller image to scale */
+            /* ^^ both of these need to be inside a block container (div, article, etc.) */
         </style>
     </head>
     <body>
