@@ -8,9 +8,13 @@
             body {font-family: Arial, Helvetica, sans-serif;}
             .row1 { 
                 padding: 80px;
-                margin-top: 40px;}
-            .row1 div {
-                padding: 40px;
+                margin-top: 40px;
+                display: flex;
+                flex-wrap: wrap; /* allows columns to wrap into a second or third row when screens not wide */
+            }
+            .row1 div { /* this is a descendant selector, it selects div children inside .row1 */ 
+                padding: 40px; 
+                flex: 1; 
             }
             .banner {width: 100%} /* use for a large image to scale to width */
             .bannersmall {max-width:100%} /* use it for a smaller image to scale */
