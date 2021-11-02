@@ -11,6 +11,7 @@
                 margin-top: 40px;
                 display: flex;
                 flex-wrap: wrap; /* allows columns to wrap into a second or third row when screens not wide */
+                /* this won;t do anything without sizing columns ours uses flex: 1 */ 
             }
             .row1 div { /* this is a descendant selector, it selects div children inside .row1 */ 
                 padding: 40px; 
@@ -19,6 +20,14 @@
             .banner {width: 100%} /* use for a large image to scale to width */
             .bannersmall {max-width:100%} /* use it for a smaller image to scale */
             /* ^^ both of these need to be inside a block container (div, article, etc.) */
+
+            @media only screen and (max-width: 600px) {
+                body {background-color: orange;}
+            }
+            @media only screen and (mid-width: 1000px) {
+            body {background-color: blue;}
+        }
+        
         </style>
     </head>
     <body>
