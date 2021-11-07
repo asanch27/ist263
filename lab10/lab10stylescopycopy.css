@@ -1,5 +1,6 @@
 @media only screen and (min-width: 768px) {
 nav{background-color: #123c69; }}
+nav{display: block;}
 nav a{color: white}
 a:hover{background-color: purple;}
 nav{padding: 10px;}
