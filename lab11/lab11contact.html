@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <title> Contact </title> 
+    </head>
+    <style> 
+body{
+    background-color: #4056a1;
+}
+.part1 {float: left;}
+.clear {clear:both;}
+
+.container1 {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    background-color: white;
+    display: flex;
+    border-radius: 2rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    gap: 3rem;
+}
+
+.container2 {
+    flex-wrap: wrap;
+    background-color:white;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;  
+    border-radius: 2rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    gap: 3rem;
+}
+
+body {font-size: 16px; line-height: 2em;}
+
+</style>
+
+<body>
+    <h1> Contact </h1>
+<div class="container1">
+    <div class="part1">
+        <h1> Address </h1>
+        <p> Andrea Sanchez <br> 
+        1414 E Genesee <br>
+        Syracuse, NY 13210 </p>
+    </div>
+
+    <div class="part2">
+    <a href="mailto:asanch27@syr.edu">Andrea Sanchez Email</a> <br>
+    <a href="https://www.linkedin.com/in/andrea-e-sanchez"> <img src="../images/logo-sized.png" alt= "A white lowercase letter I and N in a blue square"> My LinkedIn Profile </a> <br>
+    </div> 
+</div>
+    
+<div class="clear"></div>
+
+<div class="container2">
+    <div class="part4">
+        <article class="article2">
+    <form action="mailto:asanch27@syr.edu" method="POST">
+        
+    <label for="fname"> First name: </label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+    <label for="lname"> Last name: </label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+    <p> Choose your favorite skill: </p>
+    <input type="radio" id="productivitysoftware" name="fav_skill" value="productivitysoftware">
+        <label for="productivitysoftware"> Productivity Software </label><br>
+    <input type="radio" id="statisticssoftware" name="fav_skill" value="statisticssoftware">
+        <label for="statisticssoftware"> Statistics Software </label><br>
+    <input type="radio" id="coding" name="fav_skill" value="coding">
+        <label for="coding"> Coding </label><br> 
+
+    <label for="comments"> Comments: </label><br>
+    <textarea id="comments"> Write your comments here. 
+    </textarea> <br>
+    <input type="submit" value="send form">
+    </form> 
+    </article>
+    </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23325.941269591585!2d-76.14672208983778!3d43.046845734522584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f309aa521cd9%3A0xe70a8d2747e8ec36!2s1414%20E%20Genesee%20St%2C%20Syracuse%2C%20NY%2013210!5e0!3m2!1sen!2sus!4v1632625745214!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</div>
+
+</body>
+
+</html>

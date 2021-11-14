@@ -1,0 +1,13 @@
+@media only screen and (min-width: 768px) {
+nav{background-color: #123c69; }}
+nav{display: block; viewport-fit: 100vh;}
+nav a{color: white}
+a:hover{background-color: purple;}
+nav{padding: 10px;}
+nav{margin-bottom: 30px;}
+h1 {text-align: center; margin: 2rem;}
+p {margin: 2rem;}
+body {font-size: 16px; line-height: 2em;}
+.firstrow {display: flex; justify-content: space-evenly;flex: 75%; margin: 2rem;}
+.otherskills {background-color: rebeccapurple; color: white; border-radius: 15px; flex: 25%; padding: 1rem; margin: 2rem;}
+.flexbox2 {display:flex;}
