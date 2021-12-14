@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
-    <title> HOME </title>
+<title> HOME </title>
     
-    <style> 
+<style> 
+/* This is all for the slideshow */
+
 * {box-sizing: content-box;}
 
 body {font-family: Verdana, sans-serif; margin:0}
@@ -109,6 +111,8 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+/* Slideshow over, marquee beginning */ 
         
 .citynames {
             height: 50px;
@@ -116,11 +120,11 @@ img {vertical-align: middle;}
             position: relative;
             background: #f5f0e1;
             color: grey;
-			padding: 2px 0;
-      margin: 10px 0;
-        }
+			      padding: 2px 0;
+            margin: 10px 0;
+            }
         
-        .citynames p {
+.citynames p {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -133,7 +137,7 @@ img {vertical-align: middle;}
             -moz-animation: bouncing-text 5s linear infinite alternate;
             -webkit-animation: bouncing-text 5s linear infinite alternate;
             animation: bouncing-text 10s linear infinite alternate;
-        }
+              }
         
         @-moz-keyframes bouncing-text {
             0% {
@@ -165,6 +169,9 @@ img {vertical-align: middle;}
                 transform: translateX(-50%);
             }
         }
+
+/* Marquee over, the rest of CSS */
+
         body {background-color: white; color: grey; font-family: 'Playfair Display', serif; margin: 0; padding:0;}
         h1 {text-align: center;}
         header {display: flex; justify-content: center;}
@@ -176,12 +183,17 @@ img {vertical-align: middle;}
         .img1 {float: left; margin-right: 10px;}
         .img2 {float: left; margin-right: 10px; margin-bottom: 15px;}
         .img3 {float: left; margin-right: 10px;}
+        .img1 {width: 35%}
+        .img2 {width: 35%}
+        .img3 {width: 35%}
         .clear {clear: both;}
         .box1,.box2,.box3 {border-style: dotted; border-width: thin; border-color: grey; background: #f5f0e1; padding: 30px; margin-left: 100px; margin-right: 100px; margin-bottom: 30px;}
         .quote {float: right;}
         a:visited {color: #fbcbc9;}
         .home, .destinations, .bipocabroad {padding: 30px;}
         footer {margin: 0; padding: 0; background: #f5f0e1;}
+
+
 
 </style>
 </head>
@@ -252,7 +264,7 @@ img {vertical-align: middle;}
 
 <div class="box1">
 <article> 
-<img src="images/andreaonledgeinmadrid.jpeg" alt="Girl sitting on ledge in front building with Spanish flag" class="img1" width="350">
+<img src="images/andreaonledgeinmadrid.jpeg" alt="Girl sitting on ledge in front building with Spanish flag" class="img1">
 <h4> Madrid, Cuanto Te Extraño: </h4>
 <hr> 
 <p> When asked what my favorite thing about studying abroad in Madrid, Spain was, I think back to our many walking tours across the city as a part of the program the school did to incentivize us to explore. One of my favorite things about exploring Madrid and other parts of Spain was my ability to walk through history. Walking through the Plaza del Dos de Mayo made me realize history was no longer just something I read about in textbooks or lectured on in class; it was something I was observing for myself. Plaza del Dos de Mayo marked the commencement of the Spanish War of Independence. In my Understanding 20th Century Spain class, we talked about the beginning of the war and where it happened. Therefore, I could make connections between what I was learning and the places I was going, which was amazing... <a href="https://asanch27.github.io/ist263/project/destinations"> Read more about what I miss from Madrid </a>
@@ -263,8 +275,7 @@ img {vertical-align: middle;}
 
 <div class="box2">
 <article> 
-<img src="images/andreastaringatledge.jpeg" class="img2" alt="Girl staring at a ledge in front of mountain"
-width="350">
+<img src="images/andreastaringatledge.jpg" class="img2" alt="Girl staring at a ledge in front of mountain">
 <h4> Brown Girl Abroad: </h4>
 <hr> 
 <p> Being a member of a marginalized community in the United States is a unique experience. I am Latinx, specifically Mexican American. It comes with its joys and challenges, a culture built up by adversity and strength, dancing, good food, good music, and overall pride. However, it also comes with the anguish of never feeling you belong, microaggressions, stereotypes, expectations so below you that you start to wonder why anyone ever set them. As a low-income individual, the intersectionality of these systemic inequalities tends to hit me all at once. Therefore, when I received the letter that I had been accepted to an already Predominantly White Institution, Syracuse University, and their Discover Program for a first-year semester abroad in Madrid, Spain, I was both elated as well as terrified. The Euro was worth more than the dollar: How would I afford anything? I had participated in Syracuse University's Summer Start Program, a program for students funded by Student Support Services and Higher Education Opportunity Program. These are opportunity programs, and Summer Start provided low-income first-generation students to get an inside scoop at college before the arrival of other students. After returning from Summer Start, I thought about how no one from that program was coming with me abroad. That year, I was the only student from SummerStart to go abroad for Discovery. I remember feeling anxiety at the thought of being around primarily White and higher-income individuals.
@@ -274,8 +285,7 @@ width="350">
 
 <div class="box3">
 <article> 
-<img src="images/andreawithwhitepeople.jpeg" class="img3" alt="Girl standing in the middle of a group of people"
-width="350">
+<img src="images/andreawithwhitepeople.jpeg" class="img3" alt="Girl standing in the middle of a group of people">
 <h4> Me, Surrounded by White People </h4>
 <p> When I got to John F. Kennedy airport the day we flew out, I remember the first girl I met was tall, blonde, and overall, my exact opposite. Once I got past bag-check and got to boarding, I realized the majority of the students there were white. Even the ones that weren't I felt disconnected from. Having grown up in the Bronx, New York my entire life, I felt very out of place knowing the majority of these individuals did not grow up like me. I remember crying before the first day of school because I was afraid. We had already spent a couple of days in Spain, and I already felt less intelligent, less knowledgeable, and overall, less of a person. It was my first time in Europe, and I had only ever been out of the country one other time. How would I prove myself in an academic setting? I knew I was smart, but it was a lot easier to be smart in a room full of less intelligent individuals than in a room full of equally brilliant--if not more--individuals... <a href="https://asanch27.github.io/ist263/project/bipocabroad"> Read more about my study abroad experience as a BIPOC girl </a>
 </p>
