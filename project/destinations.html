@@ -196,7 +196,8 @@
     
       .flexbox1 {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap; 
+        justify-content: space-evenly;
       }
 
       .column {
@@ -210,12 +211,15 @@
         content: "";
         clear: both;
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        
       }
       
       .clear {clear: both;}
-      
+
+      @media only screen and (max-width: 480px) {.flexbox1
+        {width: 100%;}
+      }
+
       </style> 
 </head>
 
