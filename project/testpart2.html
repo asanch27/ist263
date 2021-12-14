@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: flex;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column">
+    <img src="images/usingranada.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/meonviewpoint.JPG" alt="Forest" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>

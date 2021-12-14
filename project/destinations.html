@@ -13,6 +13,8 @@
 </head>
 
 <style> 
+/* This is all for the slideshow */
+
 * {box-sizing: content-box;}
 
 body {font-family: Verdana, sans-serif; margin:0}
@@ -110,38 +112,104 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+/* Slideshow over, marquee beginning */ 
+        
+.citynames {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            background: #f5f0e1;
+            color: grey;
+			      padding: 2px 0;
+            margin: 10px 0;
+            }
+        
+.citynames p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            -moz-transform: translateX(50%);
+            -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+            -moz-animation: bouncing-text 5s linear infinite alternate;
+            -webkit-animation: bouncing-text 5s linear infinite alternate;
+            animation: bouncing-text 10s linear infinite alternate;
+              }
+        
+        @-moz-keyframes bouncing-text {
+            0% {
+                -moz-transform: translateX(50%);
+            }
+            100% {
+                -moz-transform: translateX(-50%);
+            }
+        }
+        
+        @-webkit-keyframes bouncing-text {
+            0% {
+                -webkit-transform: translateX(50%);
+            }
+            100% {
+                -webkit-transform: translateX(-50%);
+            }
+        }
+        
+        @keyframes bouncing-text {
+            0% {
+                -moz-transform: translateX(50%);
+                -webkit-transform: translateX(50%);
+                transform: translateX(50%);
+            }
+            100% {
+                -moz-transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
+
+/* Marquee over, the rest of CSS */
         
 body {background-color: white; color: grey; font-family: 'Playfair Display', serif; margin: 0; padding:0;}
-        h1 {text-align: center;}
-        header {display: flex; justify-content: center;}
-        .navigation {list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-evenly; background: #f5f0e1;}
-        /* add class to navigations, 1,2,3 then add padding */ 
-        h2 {text-align: center;}
-        /*
-        .firstrow {padding: 0px; display: flex; justify-content: space-evenly;}
-        h3 {text-align: center;}
-        .img1 {float: left; margin-right: 10px;}
-        .img2 {float: left; margin-right: 10px; margin-bottom: 15px;}
-        .img3 {float: left; margin-right: 10px;}
-        .clear {clear: both;}
-        .box1,.box2,.box3 {border-style: dotted; border-width: thin; border-color: grey; background: #f5f0e1; padding: 30px; margin-left: 100px; margin-right: 100px; margin-bottom: 30px;}
-        */
-        .quote {float: right;}
-        a:visited {color: #fbcbc9;}
-        .home, .destinations, .bipocabroad {padding: 30px;}
-        footer {margin: 0; padding: 0; background: #f5f0e1;}
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        .flexbox1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
+h1 {text-align: center;}
+.navigation {list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-evenly; background: #f5f0e1;}
+/* add class to navigations, 1,2,3 then add padding */ 
+h2 {text-align: center;}
+.quote {float: right;}
+a:visited {color: #fbcbc9;}
+.home, .destinations, .bipocabroad {padding: 30px;}
+footer {margin: 0; padding: 0; background: #f5f0e1;}
+.center1, .center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.paragraph1, .paragraph2, .paragraph3, .paragraph4 {padding: 1%; margin-left: 1.5%; margin-right: 1.5%; margin-bottom: 1.5%;}
+form {padding: 1%; margin-left: 1.5%; margin-right: 1.5%; margin-bottom: 1.5%;}
+
+* {
+box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 45%;
+    margin-left: 2.5%; margin-right: 2.5%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: flex;
+  justify-content: center;}
+
+.clear {clear: both;}
+
 </style> 
 
 <body>
@@ -154,7 +222,11 @@ body {background-color: white; color: grey; font-family: 'Playfair Display', ser
     </nav>
 </div>
 
-<h1> TRAVEL WITH ANDREA </h1>    
+<h1> TRAVEL WITH ANDREA </h1>
+
+<div class="citynames">
+  <p> Madrid, Spain | Leon, Spain | Sevilla, Spain | Cordoba, Spain | Granada, Spain | Burgos, Spain | Paris, France | Rome, Italy | El Escorial, Spain | Salamanca, Spain | Segovia, Spain  </p>
+</div>
 
 <div class="slideshow-container">
 
@@ -178,8 +250,8 @@ body {background-color: white; color: grey; font-family: 'Playfair Display', ser
     
     <div class="mySlides fade">
         <div class="numbertext">4 / 4</div>
-        <img src="images/image7big.JPG" style="width:100%" alt="XYZ">
-        <div class="text">XYZ</div>
+        <img src="images/image7big.JPG" style="width:100%" alt="A girl leaning on a long thick column">
+        <div class="text">Me in El Escorial, Spain</div>
       </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -198,25 +270,29 @@ body {background-color: white; color: grey; font-family: 'Playfair Display', ser
 
 <h2> WHERE I'VE BEEN </h2>
 
-<p> When asked what my favorite thing about studying abroad in Madrid, Spain was, I think back to our many walking tours across the city as a part of the program the school did to incentivize us to explore. One of my favorite things about exploring Madrid and other parts of Spain was my ability to walk through history. Walking through the Plaza del Dos de Mayo made me realize history was no longer just something I read about in textbooks or lectured on in class; it was something I was observing for myself. Plaza del Dos de Mayo marked the commencement of the Spanish War of Independence. In my Understanding 20th Century Spain class, we talked about the beginning of the war and where it happened. Therefore, I could make connections between what I was learning and the places I was going, which was amazing. </p>
+<p class="paragraph1"> When asked what my favorite thing about studying abroad in Madrid, Spain was, I think back to our many walking tours across the city as a part of the program the school did to incentivize us to explore. One of my favorite things about exploring Madrid and other parts of Spain was my ability to walk through history. Walking through the Plaza del Dos de Mayo made me realize history was no longer just something I read about in textbooks or lectured on in class; it was something I was observing for myself. Plaza del Dos de Mayo marked the commencement of the Spanish War of Independence. In my Understanding 20th Century Spain class, we talked about the beginning of the war and where it happened. Therefore, I could make connections between what I was learning and the places I was going, which was amazing. </p>
 
-<img src="images/malansana.jpeg" alt="A statue of two men engaged in battle" class="center" width="350">
+<img src="images/malansana.jpeg" alt="A statue of two men engaged in battle" class="center1">
 
-<p> Through walking tours, I could explore various barrios--the Spanish word for neighborhoods--of Madrid that I may not have thought to look at myself. My favorite thing about these walking tours is that I not only get to see the many elements of that barrio, but I also learn the historical context behind it. My first walking tour of Malasaña gave me an insight into this rebellious neighborhood. Following the end of Francisco Franco’s regime--authoritarian military dictator of Spain--the neighborhood partook in drugs, sex, and other behavior that was previously discouraged. </p>  
+<p class="paragraph2"> Through walking tours, I could explore various barrios--the Spanish word for neighborhoods--of Madrid that I may not have thought to look at myself. My favorite thing about these walking tours is that I not only get to see the many elements of that barrio, but I also learn the historical context behind it. My first walking tour of Malasaña gave me an insight into this rebellious neighborhood. Following the end of Francisco Franco’s regime--authoritarian military dictator of Spain--the neighborhood partook in drugs, sex, and other behavior that was previously discouraged. </p>  
 
 <div class="flexbox1"> 
-   
-<img src="images/usingranada.jpg" alt="Four girls sitting and smiling in front of a viewpoint in Granada, Spain" width="350">
-
-<img src="images/meonviewpoint.JPG" alt="A girl sits on a ledge in Granada, Spain, looking off to the distance" width="350">
-
+  
+<div class="column">
+<img src="images/usingranada.jpg" alt="Four girls sitting and smiling in front of a viewpoint in Granada, Spain" style="width: 100%;">
 </div>
 
-<p> I had the opportunity of traveling to different countries while abroad, such as Italy and France. However, when I think about one of my favorite trips, I think of our trip to Granada, Spain. My roommate, Camila, and our friends, Sasha and Jasmin, and I went to Granada for a weekend, where we were able to see marvelous sights. We were able to visit multiple viewpoints, all with stunning views, the Royal Chapel of Granada and the Gypsy Quarter of Sacramonte or "Sacred Mount" in English. Granada is located in the autonomous community of Andalusia, Spain. It is the birthplace of tapas, which we would indulge in a lot of in Spain. Tapas are snacks traditionally given with drinks, and they range from anything patatas bravas to calamari. While we couldn't go to the Alhambra since tickets sell out fast, we went to a viewpoint pictured above. It gave a beautiful panorama of it. The Alhambra is a palace built in the 1200s and 1300s for the Nasrids, an Arab dynasty. It was the last Muslim dynasty in the Iberian Peninsula, and their rule was the last centuries of Muslim control in Andalusia. However, the Catholic Monarchs, Isabella I and Ferdinand II conquered it after the “Reconquista” or reconquest. At that point, it became the royal court of the Catholic Monarchs. It is interesting to reflect on now because the Muslim and Catholic influences on Spain are evident throughout the country, especially through its architecture. I remember learning about the Reconquista in my Understanding 20th Century Spain class, and to be able to look out into the distance and see it, was enchanting. </p>
+<div class="column">
+<img src="images/meonviewpoint.JPG" alt="A girl sits on a ledge in Granada, Spain, looking off to the distance" style="width: 100%">
+</div>
 
-<img src="images/royalchapelofgranada.jpeg" alt="The Royal Chaptel of Granada" width="350" class="center">
+<div class="clear"> </div>
 
-<p> Pictured above is an image of the Royal Chapel of Granada. It is the resting place of Queen Isabella I of Castille and King Ferdinand II of Aragon. In Granada, history came full circle. It was where their story had begun in the Alhambra through their conquest of Granada. However, it was also where it ended in their place of burial. The Royal Chapel was beautiful, and I could walk around and see several paintings, books and tapestries, and fabrics they had left behind. I wanted to go to the Royal Chapel because of its historical significance, having learned about it in class. Camila and I were able to go down to their final resting places and see their graves. It was amazing to be able to see what I had been learning about, especially given the monarchy's influence on Spain, which is still prevalent present day.  </p>
+<p class="paragraph3"> I had the opportunity of traveling to different countries while abroad, such as Italy and France. However, when I think about one of my favorite trips, I think of our trip to Granada, Spain. My roommate, Camila, and our friends, Sasha and Jasmin, and I went to Granada for a weekend, where we were able to see marvelous sights. We were able to visit multiple viewpoints, all with stunning views, the Royal Chapel of Granada and the Gypsy Quarter of Sacramonte or "Sacred Mount" in English. Granada is located in the autonomous community of Andalusia, Spain. It is the birthplace of tapas, which we would indulge in a lot of in Spain. Tapas are snacks traditionally given with drinks, and they range from anything patatas bravas to calamari. While we couldn't go to the Alhambra since tickets sell out fast, we went to a viewpoint pictured above. It gave a beautiful panorama of it. The Alhambra is a palace built in the 1200s and 1300s for the Nasrids, an Arab dynasty. It was the last Muslim dynasty in the Iberian Peninsula, and their rule was the last centuries of Muslim control in Andalusia. However, the Catholic Monarchs, Isabella I and Ferdinand II conquered it after the “Reconquista” or reconquest. At that point, it became the royal court of the Catholic Monarchs. It is interesting to reflect on now because the Muslim and Catholic influences on Spain are evident throughout the country, especially through its architecture. I remember learning about the Reconquista in my Understanding 20th Century Spain class, and to be able to look out into the distance and see it, was enchanting. </p>
+
+<img src="images/royalchapelofgranada.jpeg" alt="The Royal Chaptel of Granada"class="center2">
+
+<p class="paragraph4"> Pictured above is an image of the Royal Chapel of Granada. It is the resting place of Queen Isabella I of Castille and King Ferdinand II of Aragon. In Granada, history came full circle. It was where their story had begun in the Alhambra through their conquest of Granada. However, it was also where it ended in their place of burial. The Royal Chapel was beautiful, and I could walk around and see several paintings, books and tapestries, and fabrics they had left behind. I wanted to go to the Royal Chapel because of its historical significance, having learned about it in class. Camila and I were able to go down to their final resting places and see their graves. It was amazing to be able to see what I had been learning about, especially given the monarchy's influence on Spain, which is still prevalent present day.  </p>
 
 <hr>
 
