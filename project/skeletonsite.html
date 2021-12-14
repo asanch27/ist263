@@ -110,11 +110,61 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
         
-marquee {
-  width: 100%;
-  padding: 5px 0;
-  background: #f5f0e1;
-}
+.citynames {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            background: #f5f0e1;
+            color: grey;
+			padding: 2px 0;
+      margin: 10px 0;
+        }
+        
+        .citynames p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            -moz-transform: translateX(50%);
+            -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+            -moz-animation: bouncing-text 5s linear infinite alternate;
+            -webkit-animation: bouncing-text 5s linear infinite alternate;
+            animation: bouncing-text 10s linear infinite alternate;
+        }
+        
+        @-moz-keyframes bouncing-text {
+            0% {
+                -moz-transform: translateX(50%);
+            }
+            100% {
+                -moz-transform: translateX(-50%);
+            }
+        }
+        
+        @-webkit-keyframes bouncing-text {
+            0% {
+                -webkit-transform: translateX(50%);
+            }
+            100% {
+                -webkit-transform: translateX(-50%);
+            }
+        }
+        
+        @keyframes bouncing-text {
+            0% {
+                -moz-transform: translateX(50%);
+                -webkit-transform: translateX(50%);
+                transform: translateX(50%);
+            }
+            100% {
+                -moz-transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
         body {background-color: white; color: grey; font-family: 'Playfair Display', serif; margin: 0; padding:0;}
         h1 {text-align: center;}
         header {display: flex; justify-content: center;}
@@ -147,8 +197,9 @@ marquee {
 
 <h1> TRAVEL WITH ANDREA </h1> 
 
-<marquee behavior="scroll">Madrid, Spain | Leon, Spain | Sevilla, Spain | Cordoba, Spain | Granada, Spain | Burgos, Spain | Paris, France | Rome, Italy | El Escorial, Spain | Salamanca, Spain | Segovia, Spain 
-</marquee>
+<div class="citynames">
+  <p> Madrid, Spain | Leon, Spain | Sevilla, Spain | Cordoba, Spain | Granada, Spain | Burgos, Spain | Paris, France | Rome, Italy | El Escorial, Spain | Salamanca, Spain | Segovia, Spain  </p>
+</div>
 
 <div class="slideshow-container">
 
