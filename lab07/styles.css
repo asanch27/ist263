@@ -5,3 +5,9 @@ body {
 body {color: #e899dc;}
 h1, h2, h3 {color:#984d9b;}
 a {color: #e899dc;}
+nav {background-color: #d387ab;}
+nav a {color: #E899DC;}
+nav a:hover {background-color: #FEC9f1;}
+nav {padding: 10px;}
+nav {margin-bottom: 30px;}
+
